@@ -1,0 +1,1686 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vishal Thorat Assignment 11</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css"
+        integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+    <!-- <script type="text/javascript" src="https://cdn.jsdelivr.net/jquery/latest/jquery.min.js"></script> -->
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/momentjs/latest/moment.min.js"></script>
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/daterangepicker/daterangepicker.css" />
+    <link rel="stylesheet" href="Assignment 11.css">
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="form-row pb-0 mb-0 bg-white fixed-top">
+            <div class="form-group col-sm-2 pb-0 mb-0">
+                <img src="In Time Pros Image.png" class="mt-lg-3 pt-lg-1 mt-3 pt-1 ml-xl-3 pl-2 img-fluid" width="165px" alt="">
+            </div>
+            <div class="form-group col-sm-10 pb-0 mb-0">
+                <nav class="navbar navbar-expand-lg navbar-light bg-white pb-2">
+                    <div class="lightbluecolor">Dashboard</div>
+                    <button class="navbar-toggler" type="button" data-toggle="collapse"
+                        data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                        aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                        <form class="form-inline my-2 my-lg-0 ml-auto">
+                            <i class="fal fa-search navicon m-3 text-muted"></i>
+                            <i class="fal fa-bell m-3 navicon position-relative text-muted">
+                                <i class="fas fa-circle position-absolute reddot text-danger"></i>
+                            </i>
+                            <i class="fal fa-arrow-to-bottom navicon m-3 text-muted"></i>
+                            <i class="fal fa-cog m-3 navicon text-muted"></i>
+                            <img class="img1 ml-1" src="navimg.png" width="43px" alt="">
+                            <button type="button" class="btn btn-white ml-0 m-1">
+                                <i class="fa fa-chevron-down small mr-2" aria-hidden="true"></i>John Deo
+                            </button>
+                        </form>
+                    </div>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <div class="container-fluid mt-5 pt-2">
+        <div class="form-row verticalnavbar">
+            <div class="form-group col-xl-2 shadow">
+                <div class="sidebar bg-white">
+                    <a>
+                        <i class="fad fa-chevron-double-left mt-2 ml-1 lightbluecolor"></i>
+                    </a>
+                    <a class="lightbluebg dashboard text-light py-1 my-3 mt-xl-0">
+                        <i class="fal fa-tachometer-alt-fast mr-3"></i>
+                        <span>Dashboard</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="far fa-handshake sidenavicon mr-2 pr-1"></i>
+                        <span class="sidenavfont">Clients</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="far fa-folder-open sidenavicon mr-2 pr-1"></i>
+                        <span class="sidenavfont">Projects</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="far fa-file-alt sidenavicon mr-3 pr-1"></i>
+                        <span class="sidenavfont">Invoice</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="fal fa-wave-triangle sidenavicon mr-2 pr-1"></i>
+                        <span class="sidenavfont">Activity</span>
+                        <i class="far fa-chevron-down float-right mt-1 ml-3 sidenavicon"></i>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="far fa-coins sidenavicon mr-3"></i>
+                        <span class="sidenavfont">Estimates</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="fas fa-tasks sidenavicon mr-3"></i>
+                        <span class="sidenavfont">Tasks</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="far fa-file-spreadsheet sidenavicon mr-3 pr-1"></i>
+                        <span class="sidenavfont">Timesheet</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="fal fa-users sidenavicon mr-2 pr-1"></i>
+                        <span class="sidenavfont">People</span>
+                    </a>
+                    <a class="py-1 my-3">
+                        <i class="far fa-file-chart-line sidenavicon mr-3 pr-1"></i>
+                        <span class="sidenavfont">Reports</span>
+                    </a>
+                </div>
+                
+                <!-- <i class="fad fa-chevron-double-left lightbluecolor ml-1"></i>
+                <div class="row lightbluebg py-2 my-3 mt-2">
+                    <div class="col-2">
+                        <i class="fal fa-tachometer-alt-fast text-light"></i>
+                    </div>
+                    <div class="col-10 text-light">
+                        Dashboard
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-2 sidenavicon">
+                        <i class="far fa-handshake"></i>
+                    </div>
+                    <div class="col-10 sidenavfont">
+                        Clients
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="far fa-folder-open"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Projects
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="far fa-file-alt"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Invoice
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="fal fa-wave-triangle"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Activity
+                        <i class="far fa-chevron-down float-right mt-1"></i>
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="far fa-coins"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Estimates
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="fas fa-tasks"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Tasks
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="far fa-file-spreadsheet"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Timesheet
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="fal fa-users"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        People
+                    </div>
+                </div>
+                <div class="row py-2 my-3">
+                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 sidenavicon">
+                        <i class="far fa-file-chart-line"></i>
+                    </div>
+                    <div class="col-lg-10 col-md-10 col-sm-10 col-10 sidenavfont">
+                        Reports
+                    </div>
+                </div> -->
+                
+            </div>
+            <div class="form-group col-xl-10">
+                <h3 class="mt-5 pt-1 sidenavfont">Welcome Joe!</h3>
+                <span class="form-control-lg pl-0 sidenavfont">THURSDAY NOVEMBER 12, 2020 |</span>
+                <img src="cloudimg.png" alt="img1">
+                <span class="form-control-lg pl-1 sidenavfont">SANTA CLARA</span><br>
+                <div class="mt-3">
+                    <span class="lightweightfont mt-5 mr-4 p-3 myviewfont">MY VIEW</span>
+                    <span class="lightweightfont lightbluecolor mt-5 mr-3 bord_bottom p-3">TEAM MEMBERS</span>
+                </div>
+                <div class="row mt-3 pt-1">
+                    <div class="col-lg-12 col-md-12 col-sm-12 col-12">
+                        <button type="button" class="btn btn-outline-danger secbtn rounded-0 float-right"
+                            data-toggle="popover" data-trigger="hover" data-placement="bottom" data-content="Export">
+                            <i class="fal fa-file-export"></i>
+                        </button>
+                        <script>
+                            $(function () {
+                                $('[data-toggle="popover"]').popover()
+                            }
+                            )
+                        </script>
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-light float-right mx-3" data-toggle="dropdown">
+                                <div data-toggle="popover" data-trigger="hover" data-placement="bottom"
+                                    data-content="Select Date">
+                                    <span>Today: </span>
+                                    <span class="mr-2">Oct 14</span>
+                                    <small>
+                                        <i class="far fa-chevron-down lightbluebg text-light px-2 pt-2 pb-1"></i>
+                                    </small>
+                                </div>
+                            </button>
+                            <div class="dropdown-menu dropdown-menu-right border-primary p-3"
+                                style="width: 58%; height: 55vh;">
+                                <div class="row">
+                                    <div class="small font-weight-bold col-md-3">
+                                        <div class="text-primary mt-5">Today</div>
+                                        <div class="mt-3">Yesterday</div>
+                                        <div class="mt-3">Last 7 Days</div>
+                                        <div class="mt-3">Last 30 Days</div>
+                                        <div class="mt-3">This Month</div>
+                                        <div class="mt-3">Last Month</div>
+                                        <div class="mt-3">Custom Range</div>
+                                    </div>
+                                    <div class="col-md-9" style="text-align: right;">
+                                        <input type="text" name="daterange" value="05/14/2020 - 06/07/2020" />
+                                        <script>
+                                            $(function () {
+                                                $('input[name="daterange"]').daterangepicker({
+                                                    opens: 'left'
+                                                }, function (start, end, label) {
+                                                    console.log("A new date selection was made: " + start.format('DD-MM-YYYY') + ' to ' + end.format('DD-MM-YYYY'));
+                                                });
+                                            });
+                                        </script>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="row mt-3 pl-1">
+                    <div class="col-lg-4 col-md-4 col-sm-4 ">
+                        <!-- <form>
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option class="dropdown-item text-muted">Filter By Organization Unit</option>
+                                            <option class="dropdown-item text-muted">Design</option>
+                                            <option class="dropdown-item text-muted">Development</option>
+                                            <option class="dropdown-item text-primary dropbg">Administrator</option>
+                                            <option class="dropdown-item text-muted">Quality Analyst</option>
+                                        </select>
+                                    </div>
+                                </form> -->
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-light bg-white text-muted w-100" data-toggle="dropdown">
+                                <small class="float-left lightgraytext">Filter By Organization Unit</small>
+                                <small class="float-right"><i class="fas fa-chevron-down text-muted"></i></small>
+                            </button>
+                            <div class="dropdown-menu w-100 border-info">
+                                <small>
+                                    <div class="dropdown-item text-muted">Design</div>
+                                    <div class="dropdown-item text-muted">Development</div>
+                                    <div class="dropdown-item text-primary dropbg">Administrator</div>
+                                    <div class="dropdown-item text-muted">Quality Analyst</div>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <!-- <form>
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option class="dropdown-item text-muted">Filter By Projects</option>
+                                            <option class="dropdown-item text-muted">
+                                                <button type="button" class="btn btn-primary btn-sm st dropsmallwidth border-0">MJ</button>
+                                                Mazars
+                                            </option>
+                                            <option class="dropdown-item text-muted">
+                                                <button type="button" class="btn btn-danger btn-sm nd dropsmallwidth border-0">JD</button>
+                                                IN TIME PROS
+                                            </option>
+                                            <option class="dropdown-item text-primary dropbg">
+                                                <button type="button" class="btn btn-primary btn-sm rd dropsmallwidth border-0">IT</button>
+                                                IN SURE
+                                            </option>
+                                            <option class="dropdown-item text-muted">
+                                                <button type="button" class="btn btn-secondary btn-sm th dropsmallwidth border-0">IN</button>
+                                                Laisar
+                                            </option>
+                                        </select>
+                                    </div>
+                                </form> -->
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-light bg-white text-muted w-100" data-toggle="dropdown">
+                                <small class="float-left lightgraytext">Filter By Projects</small>
+                                <small class="float-right">
+                                    <i class="fas fa-chevron-down text-muted"></i></small>
+                            </button>
+                            <div class="dropdown-menu w-100 border-info">
+                                <small>
+                                    <div class="dropdown-item text-muted">
+                                        <button type="button"
+                                            class="btn btn-primary btn-sm st dropsmallwidth border-0">MJ</button>
+                                        Mazars
+                                    </div>
+                                    <div class="dropdown-item text-muted">
+                                        <button type="button"
+                                            class="btn btn-danger btn-sm nd dropsmallwidth border-0">JD</button>
+                                        IN TIME PROS
+                                    </div>
+                                    <div class="dropdown-item text-primary dropbg">
+                                        <button type="button"
+                                            class="btn btn-primary btn-sm rd dropsmallwidth border-0">IT</button>
+                                        IN SURE
+                                    </div>
+                                    <div class="dropdown-item text-muted">
+                                        <button type="button"
+                                            class="btn btn-secondary btn-sm th dropsmallwidth border-0">IN</button>
+                                        Laisar
+                                    </div>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-md-4 col-sm-4">
+                        <!-- <form>
+                                    <div class="form-group">
+                                        <select class="form-control">
+                                            <option class="dropdown-item text-muted">Filter By Team Members</option>
+                                            <option class="dropdown-item text-muted">
+                                                <img src="boy1smimg.png" width="20px" alt="">
+                                                John Smith
+                                            </option>
+                                            <option class="dropdown-item text-muted">
+                                                <img src="boy1smimg.png" width="20px" alt="">
+                                                Edward Smith
+                                            </option>
+                                            <option class="dropdown-item text-primary dropbg">
+                                                <img src="boy1smimg.png" width="20px" alt="">
+                                                Emily joe
+                                            </option>
+                                            <option class="dropdown-item text-muted">
+                                                <img src="boy1smimg.png" width="20px" alt="">
+                                                Rosy Turner
+                                            </option>
+                                        </select>
+                                    </div>
+                                </form> -->
+                        <div class="dropdown">
+                            <button type="button" class="btn btn-light bg-white text-muted w-100" data-toggle="dropdown">
+                                <small class="float-left lightgraytext">Filter By Team Members</small>
+                                <small class="float-right">
+                                    <i class="fas fa-chevron-down text-muted"></i>
+                                </small>
+                            </button>
+                            <div class="dropdown-menu w-100 border-info">
+                                <small>
+                                    <div class="dropdown-item text-muted">
+                                        <img src="boy1smimg.png" width="20px" alt="">
+                                        John Smith
+                                    </div>
+                                    <div class="dropdown-item text-muted">
+                                        <img src="boy1smimg.png" width="20px" alt="">
+                                        Edward Smith
+                                    </div>
+                                    <div class="dropdown-item text-primary dropbg">
+                                        <img src="boy1smimg.png" width="20px" alt="">
+                                        Emily joe
+                                    </div>
+                                    <div class="dropdown-item text-muted">
+                                        <img src="boy1smimg.png" width="20px" alt="">
+                                        Rosy Turner
+                                    </div>
+                                </small>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row mt-3">
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-8 col-8">
+                                        <img src="font1img.png" width="40px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Total Members</div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-4">
+                                        <h3 class="mt-3 float-right">50</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-8 col-8">
+                                        <img src="font2img.png" width="30px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Total Projects</div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-4">
+                                        <h3 class="mt-3 float-right">54</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-8 col-8">
+                                        <img src="font3img.png" width="27px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Pending Projects</div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-4 pl-0">
+                                        <h3 class="mt-3 float-right">12</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-9 col-sm-8 col-8">
+                                        <img src="font4img.png" width="35px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Completed Projects</div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-4 col-4 pl-0">
+                                        <h3 class="mt-3 float-right">38</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card h-100 mx-1 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-8 col-8">
+                                        <img src="font5img.png" width="40px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Leaves Request</div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-4">
+                                        <h3 class="mt-3 float-right">5</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-md-8 col-sm-8 col-8">
+                                        <img src="font6img.png" class="img-fluid" width="70px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Absent Employees</div>
+                                    </div>
+                                    <div class="col-lg-4 col-md-4 col-sm-4 col-4">
+                                        <h3 class="mt-3 float-right">5</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-8 col-sm-8 col-8">
+                                        <img src="font7img.png" width="30px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Late Employees</div>
+                                    </div>
+                                    <div class="col-lg-4 col-sm-4 col-4">
+                                        <h3 class="mt-3 float-right">19</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-3 col-md-3 col-sm-3">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="row">
+                                    <div class="col-lg-9 col-sm-8 col-8">
+                                        <img src="font8img.png" width="35px" alt="">
+                                        <div class="lightweightfont text-muted mt-2">Arrived Employees</div>
+                                    </div>
+                                    <div class="col-lg-3 col-sm-4 col-4">
+                                        <h3 class="mt-3 float-right">42</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-5">
+                        <div class="card mx-1 shadow h-100">
+                            <div class="card-body">
+                                <div class="lightweightfont ml-2 mb-3">Members</div>
+                                <table class="table table-borderless table-responsive">
+                                    <thead class="bg-light px-0">
+                                        <tr class="tableheadingcolor lightweightfont">
+                                            <td>Name</td>
+                                            <td></td>
+                                            <td class="pl-5">Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <img src="boy1img.png" width="32px" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightweightfont tablefont">Edward Smith</div>
+                                                <div class="lightgraytext card9font">Sr. UI / UX Designer / Designer
+                                                </div>
+                                                <div class="lightgraytext card9font">91-7854848576</div>
+                                            </td>
+                                            <td class="pl-5">
+                                                <div class="border border-info lightgraytext small px-3 py-1 mt-2"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-info small mr-1 mb-1"></i>Active
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="boy4img.png" width="32px" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightweightfont tablefont">John Deo</div>
+                                                <div class="lightgraytext card9font">Project Manager</div>
+                                                <div class="lightgraytext card9font">91-7854848576</div>
+                                            </td>
+                                            <td class="pl-5">
+                                                <div class="border border-danger lightgraytext small px-3 py-1 mt-2"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-danger small mr-1 mb-1"></i>Busy
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="girlimg.png" width="35px" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightweightfont tablefont">Elex Turner</div>
+                                                <div class="lightgraytext card9font">Program Manager</div>
+                                                <div class="lightgraytext card9font">91-7854848576</div>
+                                            </td>
+                                            <td class="pl-5">
+                                                <div class="border border-info lightgraytext small px-3 py-1 mt-2"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-info small mr-1 mb-1"></i>Active
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <img src="girlimg.png" width="35px" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightweightfont tablefont">Elex Turner</div>
+                                                <div class="lightgraytext card9font">Program Manager</div>
+                                                <div class="lightgraytext card9font">91-7854848576</div>
+                                            </td>
+                                            <td class="pl-5">
+                                                <div class="border border-secondary lightgraytext small px-3 py-1 mt-2"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-secondary small mr-1 mb-1"></i>offline
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-primary font-weight-bold mt-4 form-control-sm">
+                                    View All (6)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-7">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body table-responsive px-0">
+                                <div class="lightweightfont ml-2 mb-3">Projects</div>
+                                <table class="table table-borderless">
+                                    <thead class="bg-light px-0">
+                                        <tr class="tableheadingcolor lightweightfont pt-3">
+                                            <td>Project Name</td>
+                                            <td>Employees</td>
+                                            <td>Deadline</td>
+                                            <td>Status</td>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg st droplargewidth border-0">MJ</button>
+                                                <span class="lightweightfont tablefont">Majars</span>
+                                            </td>
+                                            <td>
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=1cea37e9-9088-4050-a82d-a066882117b3&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=efaf3ff6-e159-45b0-a026-a08caa2cfd7d&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=3a714959-8cf1-40de-96bf-53adad8b0166&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=088a2129-cb17-47f5-ab21-6e7645ee46df&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightgraytext tablefont">Nov 12,2020</div>
+                                                <div class="lightgraytext tablefont">13:12 PM</div>
+                                            </td>
+                                            <td>
+                                                <div class="border border-info tablefont lightgraytext px-2 py-1 mt-1"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-info small mr-1 mb-1"></i>In Progress
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-danger nd btn-lg nd droplargewidth border-0">JD</button>
+                                                <span class="lightweightfont tablefont">Project Name</span>
+                                            </td>
+                                            <td>
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=1cea37e9-9088-4050-a82d-a066882117b3&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=efaf3ff6-e159-45b0-a026-a08caa2cfd7d&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=3a714959-8cf1-40de-96bf-53adad8b0166&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=088a2129-cb17-47f5-ab21-6e7645ee46df&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightgraytext tablefont">Nov 12,2020</div>
+                                                <div class="lightgraytext tablefont">13:12 PM</div>
+                                            </td>
+                                            <td>
+                                                <div class="border border-warning tablefont lightgraytext px-3 py-1 mt-1"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-warning small mr-1 mb-1"></i>Pending
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-primary btn-lg rd droplargewidth border-0">IT</button>
+                                                <span class="lightweightfont tablefont">Project Name</span>
+                                            </td>
+                                            <td>
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=1cea37e9-9088-4050-a82d-a066882117b3&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=efaf3ff6-e159-45b0-a026-a08caa2cfd7d&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=3a714959-8cf1-40de-96bf-53adad8b0166&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=088a2129-cb17-47f5-ab21-6e7645ee46df&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightgraytext tablefont">Nov 12,2020</div>
+                                                <div class="lightgraytext tablefont">13:12 PM</div>
+                                            </td>
+                                            <td>
+                                                <div class="border border-secondary lightgraytext tablefont px-3 py-1 mt-1"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-secondary small mr-1 mb-1"></i>On Hold
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        <tr>
+                                            <td>
+                                                <button type="button"
+                                                    class="btn btn-secondary btn-lg th droplargewidth border-0">IN</button>
+                                                <span class="lightweightfont tablefont">Project Name</span>
+                                            </td>
+                                            <td>
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=1cea37e9-9088-4050-a82d-a066882117b3&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=efaf3ff6-e159-45b0-a026-a08caa2cfd7d&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=3a714959-8cf1-40de-96bf-53adad8b0166&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                                <img src="https://cdn-sharing.adobecc.com/content/storage/id/urn:aaid:sc:US:d97df53d-2828-43d1-9339-e5b253e0bb08;revision=0?component_id=088a2129-cb17-47f5-ab21-6e7645ee46df&api_key=CometServer1&access_token=1645458228_urn%3Aaaid%3Asc%3AUS%3Ad97df53d-2828-43d1-9339-e5b253e0bb08%3Bpublic_1233850de2b1fbf0afd4829f21731d1a43916b0c"
+                                                    width="30px" class="img-fluid mt-2" alt="">
+                                            </td>
+                                            <td>
+                                                <div class="lightgraytext tablefont">Nov 12,2020</div>
+                                                <div class="lightgraytext tablefont">13:12 PM</div>
+                                            </td>
+                                            <td>
+                                                <div class="border border-info lightgraytext tablefont px-2 py-1 mt-1"
+                                                    style="border-radius: 20px; width: 110px;">
+                                                    <i class="fa fa-circle text-info small mr-1 mb-1"></i>In Progress
+                                                </div>
+                                            </td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                                <div class="text-primary font-weight-bold mt-3 pt-4 form-control-sm">View All (6)
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-6">
+                        <div class="form-row h-100">
+                            <div class="form-group col-md-6">
+                                <div class="card mx-1 h-100 shadow">
+                                    <div class="card-body">
+                                        <div class="tableheadingcolor lightweightfont">
+                                            Billable / Non - Billable
+                                        </div>
+                                        <div class="mt-lg-3">
+                                            <span>
+                                                <i class="fas fa-stop piebox1 mx-2 "></i>
+                                            </span>
+                                            <span>Billable</span>
+                                            <span class="float-right">38</span>
+                                        </div>
+                                        <div class="mt-3">
+                                            <span>
+                                                <i class="fas fa-stop piebox2 mx-2"></i>
+                                            </span>
+                                            <span>Non - Billable</span>
+                                            <span class="float-right">12</span>
+                                        </div>
+                                        <div class="row">
+                                            <div class="col-xl-6">
+                                                <canvas id="myChart" style="width: 20px; height: 35px;"></canvas>
+                                            </div>
+                                            <div class="col-xl-6 p-o">
+                                                <div class="font-weight-bold small mt-xl-5">Info</div>
+                                                <div class="row p-0">
+                                                    <div class="col-md-12 pl-1">
+                                                        <span>
+                                                            <i class="fas fa-stop piebox1 mx-2 card9font"></i>
+                                                        </span>
+                                                        <span class="card9font">Billable</span>
+                                                        <span class="float-right card9font mt-2">38</span>
+                                                    </div>
+                                                    <div class="col-md-12 pl-1">
+                                                        <span>
+                                                            <i class="fas fa-stop piebox2 mx-2 card9font"></i>
+                                                        </span>
+                                                        <span class="card9font">Non-Billable</span>
+                                                        <span class="float-right card9font mt-2">12</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="card mx-1 h-100 shadow">
+                                    <div class="card-body">
+                                        <div class="tableheadingcolor lightweightfont">New Arrivals</div>
+                                        <div class="row mt-4 ">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="boy1img.png" width="25px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">Edward Smith</div>
+                                                <div class="lightgraytext card9font mt-1">Sr. UI / UX Designer /
+                                                    Designer</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4 ">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="boy4img.png" width="25px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">John Doe</div>
+                                                <div class="lightgraytext card9font mt-1">Project Manager</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4 ">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="girlimg.png" width="30px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">Alex Turner</div>
+                                                <div class="lightgraytext card9font mt-1">Program Manager</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-6">
+                        <div class="form-row h-100">
+                            <div class="form-group col-md-6">
+                                <div class="card mx-1 h-100 shadow">
+                                    <div class="card-body">
+                                        <div class="tableheadingcolor lightweightfont">Birthdays</div>
+                                        <div class="row mt-4 bordleft">
+                                            <div class="col-8">
+                                                <div class="font-weight-bold lightbluecolor">October</div>
+                                                <div class="font-weight-bold lightbluecolor">Birthdays</div>
+                                            </div>
+                                            <div class="col-4">
+                                                <img src="cakeimg.png" alt="">
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4 pt-1">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="boy1img.png" width="25px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">Edward Smith</div>
+                                                <div class="lightgraytext card9font mt-1">Sr. UI / UX Designer /
+                                                    Designer</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="girlimg.png" width="30px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">Alex Turner</div>
+                                                <div class="lightgraytext card9font mt-1">Program Manager</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-6">
+                                <div class="card mx-1 h-100 shadow">
+                                    <div class="card-body">
+                                        <div class="tableheadingcolor lightweightfont">Department Members</div>
+                                        <div class="row mt-2 mt-lg-4">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="boy1img.png" width="25px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">Edward Smith</div>
+                                                <div class="lightgraytext card9font mt-1">Sr. UI / UX Designer /
+                                                    Designer</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="boy4img.png" width="25px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">John Doe</div>
+                                                <div class="lightgraytext card9font mt-1">Project Manager</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                        <div class="row mt-4">
+                                            <div class="col-2 mt-auto mb-auto">
+                                                <img src="girlimg.png" width="30px" alt="">
+                                            </div>
+                                            <div class="col-10">
+                                                <div class="lightweightfont tablefont">Alex Turner</div>
+                                                <div class="lightgraytext card9font mt-1">Program Manager</div>
+                                                <div class="lightgraytext card9font mt-1">91-7854848576</div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card bg-white table">
+                    <div class="card-body px-0">
+                        <table class="table table-borderless table-responsive-lg">
+                            <thead class="bg-light px-0">
+                                <tr>
+                                    <td class="tableheadingcolor lightweightfont">Timesheet Name</td>
+                                    <td class="tableheadingcolor lightweightfont">Employees Name</td>
+                                    <td class="tableheadingcolor lightweightfont">Project Name</td>
+                                    <td class="tableheadingcolor lightweightfont">Submitted Hours</td>
+                                    <td class="tableheadingcolor lightweightfont">Approved Hours</td>
+                                    <td class="tableheadingcolor lightweightfont">Status</td>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td class="myviewfont tablefont">Timesheet (11 Nov, 2020)</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-sm-2">
+                                                <img src="girlsmimg.png" width="27px" height="31px" alt="">
+                                            </div>
+                                            <div class="col-sm-10">
+                                                <span class="tableheadingcolor lightweightfont tablefont position-relative">
+                                                    John Doe
+                                                    <div class="position-absolute tickmark small">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                </span>
+                                                <div class="text-muted card9font">UI/UX Developer</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tablefont myviewfont">IN TIME</td>
+                                    <td class="text-muted small">08:00 hrs</td>
+                                    <td>
+                                        <div class="text-muted small px-4 py-1 blue2"
+                                            style="border-radius: 20px; width: 100px;">
+                                            08:00 hrs
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="border border-info small px-3 py-1 myviewfont"
+                                            style="border-radius: 20px; width: 110px;">
+                                            <i class="fa fa-circle text-info small mr-1 mb-1"></i>Approved
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="myviewfont tablefont">Timesheet (11 Nov, 2020)</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="girlsmimg.png" width="27px" height="31px" alt="">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <span class="tableheadingcolor lightweightfont tablefont position-relative">
+                                                    John Doe
+                                                    <div class="position-absolute tickmark small">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                </span>
+                                                <div class="text-muted card9font">UI/UX Developer</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tablefont myviewfont">IN TIME</td>
+                                    <td class="text-muted small">08:00 hrs</td>
+                                    <td>
+                                        <div class="text-muted small px-4 py-1 blue2"
+                                            style="border-radius: 20px; width: 100px;">
+                                            08:00 hrs
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <div class="border border-warning small px-3 py-1 myviewfont"
+                                            style="border-radius: 20px; width: 110px;">
+                                            <i class="fa fa-circle text-warning small mr-1 mb-1"></i>Pending
+                                        </div>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="myviewfont tablefont">Timesheet (11 Nov, 2020)</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="girlsmimg.png" width="27px" height="31px" alt="">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <span class="tableheadingcolor lightweightfont tablefont position-relative">
+                                                    John Doe
+                                                    <div class="position-absolute tickmark small">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                </span>
+                                                <div class="text-muted card9font">UI/UX Developer</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tablefont myviewfont">IN TIME</td>
+                                    <td class="text-muted small">08:00 hrs</td>
+                                    <td>
+                                        <div class="text-muted small px-4 py-1 blue2"
+                                            style="border-radius: 20px; width: 100px;">
+                                            08:00 hrs
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="border border-info small px-3 py-1 myviewfont"
+                                            style="border-radius: 20px;">
+                                            <i class="fa fa-circle text-info small mr-1 mb-1"></i>Approved
+                                        </span>
+                                    </td>
+                                </tr>
+                                <tr>
+                                    <td class="myviewfont tablefont">Timesheet (11 Nov, 2020)</td>
+                                    <td>
+                                        <div class="row">
+                                            <div class="col-md-2">
+                                                <img src="girlsmimg.png" width="27px" height="31px" alt="">
+                                            </div>
+                                            <div class="col-md-10">
+                                                <span class="tableheadingcolor lightweightfont tablefont position-relative">
+                                                    John Doe
+                                                    <div class="position-absolute tickmark small">
+                                                        <i class="fas fa-check-circle"></i>
+                                                    </div>
+                                                </span>
+                                                <div class="text-muted card9font">UI/UX Developer</div>
+                                            </div>
+                                        </div>
+                                    </td>
+                                    <td class="tablefont myviewfont">IN TIME</td>
+                                    <td class="text-muted small">08:00 hrs</td>
+                                    <td>
+                                        <div class="text-muted small px-4 py-1 blue2"
+                                            style="border-radius: 20px; width: 100px;">
+                                            08:00 hrs
+                                        </div>
+                                    </td>
+                                    <td>
+                                        <span class="border border-info small px-3 py-1 myviewfont"
+                                            style="border-radius: 20px;">
+                                            <i class="fa fa-circle text-info small mr-1 mb-1"></i>Approved
+                                        </span>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-md-4">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Most Offline Time Logged</div>
+                                <div class="text-muted card9font text-center my-5 py-5">No one has logged offline time
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <div class="card mx-1 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Late</div>
+                                <div class="row mt-2">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="boy1img.png" width="25px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Peter David</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="text-muted card9font">13m of 4h 17m</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                                        <div class="lightweightfont tablefont">Lavina Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="text-muted card9font">12m of 52m</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-2">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                                        <div class="lightweightfont tablefont">Lavina Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="text-muted card9font">8m of 2h 36m</div>
+                                    </div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-4">View
+                                    All(16)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-md-4">
+                        <div class="card mx-1 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Absent</div>
+                                <div class="row mt-2">
+                                    <div class="col-2">
+                                        <img src="boy1img.png" width="25px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Peter David</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                                        <div class="lightweightfont tablefont">Lavina Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                    </div>
+                                </div>
+                                <div class="row mt-4">
+                                    <div class="col-lg-2 col-md-2 col-sm-2 col-2">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-lg-10 col-md-10 col-sm-10 col-10">
+                                        <div class="lightweightfont tablefont">Lavina Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                    </div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-4">View
+                                    All(69)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <div class="card mx-1 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Most Productive</div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="boy1img.png" width="25px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Peter David</div>
+                                        <div class="text-muted card9font">UI / UX Developer</div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar stprogress" role="progressbar"
+                                                        style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-muted card9font">4 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Lavino Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar stprogress" role="progressbar"
+                                                        style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-muted card9font">4 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Simone Fernandes</div>
+                                        <div class="text-muted card9font">UI / UX Developer</div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar stprogress" role="progressbar"
+                                                        style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-muted card9font">4 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-3">View
+                                    All(69)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <div class="card mx-1 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Most Unproductive</div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="boy1img.png" width="25px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Peter David</div>
+                                        <div class="text-muted card9font">UI / UX Developer</div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar"
+                                                        style="width: 30%" aria-valuenow="30" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-muted card9font">4 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Lavino Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar"
+                                                        style="width: 40%" aria-valuenow="40" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-muted card9font">4 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Simone Fernandes</div>
+                                        <div class="text-muted card9font">UI / UX Developer</div>
+                                        <div class="row">
+                                            <div class="col-8">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar bg-danger" role="progressbar"
+                                                        style="width: 35%" aria-valuenow="35" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-4 text-muted card9font">4 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-3">View
+                                    All(6)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <div class="card mx-1 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Most Effective</div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="boy1img.png" width="25px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Steven Fernandez</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar rdprogress" role="progressbar"
+                                                        style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 text-muted card9font pl-0">13 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Lavino Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar rdprogress" role="progressbar"
+                                                        style="width: 90%" aria-valuenow="90" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 text-muted card9font pl-0">13 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="row mt-3">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="girlimg.png" width="30px" alt="">
+                                    </div>
+                                    <div class="col-10">
+                                        <div class="lightweightfont tablefont">Lavino Pinto</div>
+                                        <div class="text-muted card9font">Developer</div>
+                                        <div class="row">
+                                            <div class="col-9">
+                                                <div class="progress mt-1" style="height: 5px;">
+                                                    <div class="progress-bar rdprogress" role="progressbar"
+                                                        style="width: 95%" aria-valuenow="95" aria-valuemin="0"
+                                                        aria-valuemax="100">
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <div class="col-3 text-muted card9font pl-0">13 hr 32m</div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-3">View
+                                    All(69)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group col-lg-4">
+                        <div class="card mx-1 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Most Productive Apps</div>
+                                <div class="row mt-3 bordr1 bordrrds bg-light">
+                                    <div class="col-8">
+                                        <img src="teamsimg.png" alt="">
+                                        <span class="cardimgfont tablefont lightweightfont">Teams</span>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 bordr2 bordrrds bg-light">
+                                    <div class="col-8">
+                                        <img src="adobexdimg.png" alt="">
+                                        <span class="cardimgfont tablefont lightweightfont">Adobe Xd</span>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 bordr3 rounded-end bordrrds bg-light">
+                                    <div class="col-8">
+                                        <img src="outlookimg.png" alt="">
+                                        <span class="cardimgfont tablefont lightweightfont">Outlook</span>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 bordr4 bordrrds bg-light">
+                                    <div class="col-8">
+                                        <img src="zohoimg.png" alt="">
+                                        <span class="cardimgfont tablefont lightweightfont">Zoho</span>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-3">View
+                                    All(123)</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <div class="card mx-1 h-100 shadow">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Unproductive Apps</div>
+                                <div class="row pb-1 mt-3 bordr4 bordrrds bg-light">
+                                    <div class="col-3 ml-auto mb-auto">
+                                        <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQmYI6-sLKtMGR1wrmQTbuk7mCxR3zMf4dAhg&usqp=CAU"
+                                            width="42px" alt="">
+                                    </div>
+                                    <div class="col-5 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">Youtube</div>
+                                        <div class="text-muted card9font">36m 6s</div>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 bordr5 bordrrds bg-light">
+                                    <div class="col-3">
+                                        <img src="data:image/jpeg;base64,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"
+                                            width="45px" alt="">
+                                    </div>
+                                    <div class="col-5 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">Instagram</div>
+                                        <div class="text-muted card9font">10m 5s</div>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 bordr6 bordrrds bg-light">
+                                    <div class="col-3">
+                                        <img src="hubspotimg.png" width="43px" alt="">
+                                    </div>
+                                    <div class="col-5 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">Hubspot</div>
+                                        <div class="text-muted card9font">6m 24s</div>
+                                    </div>
+                                    <div class="col-4 float-right mt-auto mb-auto small">00:30 h</div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-group col-lg-4">
+                        <div class="card mx-1 shadow h-100">
+                            <div class="card-body">
+                                <div class="sidenavfont lightweightfont">Neutral Apps</div>
+                                <div class="row mt-3 pt-2 bordr7 bordrrds bg-light">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="webimg.png" width="29px" alt="">
+                                    </div>
+                                    <div class="col-7 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">practicemock.com</div>
+                                        <div class="text-muted card9font">1h 82m 52s</div>
+                                    </div>
+                                    <div class="col-3 float-right mt-auto mb-auto pl-0 small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 pt-2 bordr7 bordrrds bg-light">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="webimg.png" width="29px" alt="">
+                                    </div>
+                                    <div class="col-7 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">pdfmake.org</div>
+                                        <div class="text-muted card9font">50m 5s</div>
+                                    </div>
+                                    <div class="col-3 float-right mt-auto mb-auto pl-0 small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 pt-2 bordr7 bordrrds bg-light">
+                                    <div class="col-2 mt-auto mb-auto">
+                                        <img src="webimg.png" width="29px" alt="">
+                                    </div>
+                                    <div class="col-7 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">azurewebsite.in</div>
+                                        <div class="text-muted card9font">36m 5s</div>
+                                    </div>
+                                    <div class="col-3 float-right mt-auto mb-auto pl-0 small">00:30 h</div>
+                                </div>
+                                <div class="row mt-3 pt-2 bordr7 bordrrds bg-light">
+                                    <div class="col-2 mt-2">
+                                        <img src="webimg.png" width="29px" alt="">
+                                    </div>
+                                    <div class="col-7 mt-auto mb-auto">
+                                        <div class="cardimgfont tablefont lightweightfont">
+                                            progressivedemo.azurewebsites.in
+                                        </div>
+                                        <div class="text-muted card9font">24m 45s</div>
+                                    </div>
+                                    <div class="col-3 float-right mt-auto mb-auto pl-0 small">00:30 h</div>
+                                </div>
+                                <div class="text-primary font-weight-bold form-control-sm pl-0 mt-2">View
+                                    All(176)</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="card shadow">
+                    <div class="card-body">
+                        <div class="suspicious">Suspicious Screenshots</div>
+                        <!-- <div class="form-row"> -->
+                        <!-- <div class="form-group col-md-6"> -->
+                        <div class="form-row">
+                            <div class="form-group col-md-3">
+                                <div class="card mx-1 h-100">
+                                    <div class="card-body">
+                                        <img src="assignscreen1.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,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"
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">James Aderson</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <div class="card mx-1 h-100">
+                                    <div class="card-body">
+                                        <img src="assignscreen2.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,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"
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">John David</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <!-- </div> -->
+                            <!-- <div class="form-group col-md-6"> -->
+                            <!-- <div class="form-row"> -->
+                            <div class="form-group col-md-3">
+                                <div class="card mx-1 h-100">
+                                    <div class="card-body">
+                                        <img src="assignscreen3.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,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"
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">Lavina Pinto</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <div class="card mx-1 h-100">
+                                    <div class="card-body">
+                                        <img src="assignscreen1.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,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"
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">James Aderson</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <!-- <div class="form-row"> -->
+                        <!-- <div class="form-group col-md-6"> -->
+                        <div class="form-row">
+                            <div class="form-group col-md-3 h-100">
+                                <div class="card mx-1">
+                                    <div class="card-body">
+                                        <img src="assignscreen2.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,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"
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">Sebastian Alexander</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <div class="card mx-1 h-100">
+                                    <div class="card-body">
+                                        <img src="assignscreen3.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAABGlBMVEX////qLw/qLxDqLg7qLQ3qLAzqMBHpKwvqMhPpKgrqMxTqMRLqNRbqNBX6+vrqNRfpKgnrNhjrNxnpKQjrOBr1ycTpHwD+1dDe3t7m5ubtTC7pJgDJFgDtSyzz8/PY2NjsQyT+9vX97+3Ly8vdGAD73dj85OH2jHzuUzbvblnsRSj6ycLoDAC/v7/Ozs7Z2dnUgHbSEADwz8v8wbn4r6T0oJX4loj0g3L0bln0aFDyXkP1hnX1opf6s6rxe2jtVzvXLADkj4bDPCbJl5HCLAq5enKxray/cGbJKACxuLjEYle8qabFW03GUkLBoZ3HSTjJiYHMwsHSt7PVpJ7HNBzUkovj19Xnf3XYNh/nuLPHQzHakYrlwLzVhHtNqgdAAAAQwUlEQVR4nO2dC1MbORaF5Xf7SeM2htAEjGPMMwkYMODwCmF3GAaWmbxJyP//G6tWt+1u6Uq6ajvZ1FafqkmmUiTxxzm690qWO4QkSpQoUaJEiRIlSpQoUaJEiRIlSpQoUaJEiRIlSpQoUSJRtVVP7Xa7S7XGNI8Q+0L6O+hvZH9A7X+IsEpf+9r83Pb+/tnB6eHhYX/96Hxz8/j4ZDC4uNjYWFzcoD9seD8o9TzQ+P8ion/MxWBwcnK8uXn+Zr3fPzw9ONvf396ep9+G9uq0idbmKAwlOT8eXGwE8l/llq8WU4NppjJTrZYspjIT+ynPlBop44v9X5bJ+7mQzaTS6bxVKlVnZur1xkitoby/jvJvDDaP1vunZ/vb8934vKvzZ/3NgY/z/LlP0mjU65VqtUL/K1WZKpVKxf+RaWao8S9VR6KvPFDZGqo8Uj5QOp0efQ98+ByV7clxbDubSZcr9RH31tbG4Oh0u21K1z47p2CUySOqz87O1v3v6PjbWh9pdqwR30wFABzxlSwFoM/oKyWYTqFzAbDDVMhXPNSTwzUDvPk3FK5RCadEUB0inDZgGgAMbB1amytSUtepNlon+1i8c0o3q2CTW2gOaE0MyFSglNXGBgZxdX2xNaOlo5r9rQCpbDffONEGdf5iC4WHd7ACAEIZnRjQQ7Qap2q+08WGauFNC/CnOOjJcSqbqsaxvoXFmz5geRqAhYKbGsh7xlELz/e7AhYde1FGaMSnAaxOBRDqgzrAouNICPsGdL+xg5TQHUB822Z8v2eRYYCUcF3kW12smgFi++AvBnQ8QtedFwOa+UkO/rJGP3awWGxe8Hzdqn44kwFWfj9Ap3nGAa7bpnzTGdUmH7ZBwKK7FeVrW0gswMAY2yXVflDbJnIAYJEHdJrRwfvUNTQwDqBl7GCsPhiswpMI4PPKNBwM8VVFPnRE1QnFVFHPwp3wxmLO2MBQl4BqDHhkoQZMGwPmVA4Wm/0YJQYyEF1EQcC80sGMMqHKiBbdxpivht0jjb8sVEPNu8REEYX4IEBnZ9zs580Tql6C6IRqHDSPaLEIZbSPBAQTCgKOHSz9ilkbBHQXR4AbhmNoOKFTc1BdZLLGgLazM9w1tY0NDCdUvQTxbTAt8k3koG3vDHv99gRdPs4coxlkID7jPu8BNtfNlmDIQE0NjQOoTmgswNE8Oij9NAOn3yUMAJ2d4IDNNjmKiRpoAAgtwckAixpAO+iEXVRCwQqjn9NKSsAytoiCbbAo8nGAB/gaEzZZZ6CmSYAJjdEGtREdVpkDwyIaNjDEN35vsIIGxM4x6BrDAR5ji2jYv7qJgZo5BgRMTamI0jLqzzLnKSMDQ3yhFahrEpNNojEddJoM8AR5XKEKKMwHDqLhLpgX+fIjA8HNkkkRHfaJlmY3H2kidb2BuoRiD2Twu0HhRCYAtHe6HqBJjakbGRhnCU6xiAaNUD1qczNA2L9ZnYG6hIJbiRgnTqFR2+YAvXF7rYk3EMEHA1oQILrNxyiiAeCB2YGTLKCyhMbogro5BjoUlQOyTf0+GnC2bmRgmA8cRMGEpswBxzXG4QGPTAaZWYR/4R44Dmg4oehBNFREsdv5ArcE/VEGuxuMqiIBHB/4Xs5YJTGh4E4CbPMTHakFgO4GBXyDOhON9D+5geOAum+vLisWroaWNQlFO+jwgFkKeIyZ1Dj/pAEdAzbnau+uA0SDGqpZgpouwQOyWW0DsZ+flfPJWkRzjpCFfzFEsIRKxhg0IDio2VE+2iforFbXvu9S5/2TLUAOsEaWX/5xc1ktgwkFASE+uMaMAaEiOgJs00lNc2DB4+H4qh5grUYW/k0RR13C0o0x4KQ9BlR3QaGIsmF0VT3ICHjRfEpaBB1ifEDPRA/RshQ1FJrT4hw4CUWUDaNtBaBIp+QLGzgE9Ez886/bABEetME5LcYbS1BE50hXCljnWoOIJw0onUJHgJ6Jf/51t3RpWToDwSYILkHEZnA4bUveWYLMU/oXCSgd08aAzMQ//7pfqqTLgIH4Lm/a5r1R5oxsu75POjShvPB8kYBGAamJL16+/M/DUjVfFppgKKEpdUJ1NQYCPKWztoIIn08uoBygZ+JLivhtiAiPabomAQIWRb4Q4CE5QwMq+SL5BAB9E1+8+3hZyht1+Ti7+RBgn24m4tCp+Px9Lg8YmOgjwj1Cl1DDQZQBfiGHGEABT8XnD9giYK3GTHzx9/UlOIfqxpjQEiyiAc9J35kCX1XgAwGZiS8o4s1lPi8mFNoKwgmFmgRUYzzAdduYTs1XUgAyE1+8ePXP7hDRIKFQiYncZQYA3WNylDGl4/CiBXR00CQBrNUWqIUU8Y8lDxGcYiQlRtMkID7bHZDzlCGemm90SiEFrC2/8ghX/rmliKk4XR7dBdmW/qRsAifiSfgUgMzEV69erbyn81tqaGGoR4CXK8IJBZcg5KDjbpGB5b1sDBqGr4QC9Ez0CF+/v1+yMmluBYZLDL6GggY6ToNu6KMEFRgMxRc66VUDeiZ6hCsL778FiPAKBAdtsMaIe0EGWCZbaiI1XkXKpwOsLa9QvpWV1wsfriiidiOhHbTBGuM4RdJAAwp4Kr6SDrBWe8YIVxYWPnxcKmehHqHbKYFdPrwEqYh6yanwovNL5CQbBUhNZB6+Xlh4d72UzwIJ1XR5zSDqA8bG45Yfx2chAKmJHh8FXFj4dHOZyqBKDL6GogEhOj6ePB/GQc/E1yuMb+HZwnfaM1JGTVC3BB0cIIjHx5Pjo8IBUhN9QIr4eZciZsAxNGSgQZdHAMJwGvv8k2wsYG15CPiMIY4JM5qtLiqhckAZG8THAZZMHPRM9PGolj/fjhHBHmFQYgJA9orxbEA6QT4TQM/EZ4GWe3R+y2bMtrryGjoENBCAV4rwWeaAnokjwuXe/VI+Y9Yj5Ak1BawI6eT5hu9CmAHWlp+NtFzrfc2FV2C4xJgm1BBQxOPry+htCENAauLIwrWjRjZioK7E2PKEmgAC7vH2hd4pMwYMTFz+/KZF+eAmb55QPKC49pR8MQA9xOXP/VajkE0ZGahKKBYQxOPjGeaLBUjab5+3slnDHqHo8jhAGA6wz5oMkKyeLrYyOWFK042hii6PAJTRCXhR/8wBSe1so5WyxSavW4HwTgkFKIUD0sn5h9xNhPD2L1r5QkacQrPaEiPZy48AQ88pwpDJ7OP4yiaAhOwPWiUbmkJl+wj57aYooE30NAg8Lp7eW7kGgGTupFWxs+A2YtKE2qQhNjcNnijOPnbXAA1Ieputuh3eJklKKGxgUXpYEQBumQECeCAfFpCsnbcadiZ8UCGZQmMZ6BTIhmWCJ4Yzco8piKeFBSTdI4Yn44M3usidIFOZDMqTmCeuvuFNCgQg6a57Ywt3EBMJqHYFKqcYxzv4PUlNQCfijW6KaAFJuz/EixoI90DYQHgMHQO6LXKejY+n4NMBktXD543s8KhQYqC+hOoMdBfJkR0TDsQr4wBJ7WCxlcqlAL7wCpSUUNBACeAF+eLGYQPxIlfRFIBsKsvnoI/wSPniGeg0T0gfBFSiSfDCVwkVgGxssWzw/VxMQA16BAU8J4euFgaHZ0X4ZICEbJ+0qoXQm2XRgMI9PuYKZIAH5oAQXsniBAOSuePWTAQvwidrEdoSKgX8Qs5MAUE8gQ8ctr2prFFIhd8riyzASEDhCqM3MArYJ/tGgDAdH0/vLhpwEcibyihe+M1c+QLUB1S/AingIZlrmuDxYxmM5921E65ydd/4eGlpQDNGAQ0bCI3ZPuAp6WEBJeaJ6fTvSkYBSZtOZdkM92Y8F1BJi4gYWDQy0Nk5I10UoMQ7EM+/Cxq5L9rub7UyGf62CJIvbGARNFC2AingPmnrAKXOSfCCe2ihG790Kmtlsvx1Jn4BRvgQAcUY6OzMkVUloJIOwhtd5R0C0qmMji1Z8baPYgGGW7zZChQAe4S4ljGYHG98jTD4WEHt7KJlZaHbPlH/ohU0toEC4BohqbzF78hl602HF76pzD4Ywg6TctCDVPgOLwsookUoDGSPlFnMYOwyxGOA3lRWyYHX7VQFRlphCnBCFXzsY9jH7lToIvewPcBe77hVt8Mf+lA0CFmLj/BpWwQASAg5MgRE4ZXL9mCL9XWJfxk5X3gBSgKKqzB0O+iyD0hOThf5HERwVbkewVPmMysLaHiXFPIPbSB7ZM4BGtASZzKJfd5V5XQeyZeS8iEWoBqQfcR1vzmRdSBeOUrHLT+OT15gJNtcZIvwAL0PKc/pAVV00doZ2Mfx5fF8iBaPXoFst+Q9KCA2G4xX5ugM/MOMMPiA0iLqPSig3YT6ug5MGk4BT8MnaxARvngBZbM2VTOPo0G5B/Cp6ksK5V9cA4PnNzZSsehgPH71cctP5V/UQEmBMTLQ8R+3cmLHwQPTKeCllXzyBiFfgCZ8wQNzzt3p4Inp5OMZjy92QB13hz3y6K0RoAQOsk8oL5H5jM9nZAFOJaBO8Oy/s+bkdCAeb19G4V+kwEgXoGyXJAEMntQ8hwSEy4oknKZ80gITP6Ds2Jc9+m8H45wUDocntAeFf/IFCN66k/I5waP/iKNqhHIueTjF6qnhQxYYs4D6JzKqPqFlk7gn2pfm4hmdz5B8pgGlRTR4/OZbF4OCpYPs4/lU+ZQWmKIxYCt4gOpcc6p4uuWn9k9eYEwDOqwx3ritqCBmdJPyyQuoYYdgS/Bx9Bhq25gOqiwQnRBPrj2g+WT5VAGO/vEeo0Uo9Q7mU9vH8eEKDNJA9+voQeI99CJU0GHw+PKi8k/aAbEGNt+OAEkhMyEciKfnyyn8C5+iSQuMgm/UBT190WVUDQfSiXjq8hLli5wSxlmAjns55iO9ndhs8flU/sn5kAuQGhhKKCFfc7HIpHQIvKyKD1dg1IDdMOCnJhIHh8ePZtryqeSLswCd5kOYj6x2MtOjQ9j30/mcnacIINl1p0UH4AnVMy4fegE6za9RPtI2tNAIbwL/ClI+jYGPHCD5brAKpXQQHmBftLwo+nvcAuM0v/F8tJDaE8JJ8ET7cnj/YvK5e8A/V9vrpCaiA/FE+/h44vkMADvfRT7aKpSESjYpnm71cfs/nk9aQDUBfYD4aCWFC40OTUaHiieaz2QBfqzBgAIhAs0ITxPP6fC5nSsZH03pXlbPw+OJU4sML/dL+B7kfIQ8LbkZIzqZe0Jt0S4/fH1R7iH2dhV4VM/uOg5/KGZKB9qX0dg3FT63syQ0eEGPHzsOwkU5Hco+nX/yfMr5XGfvVv7vYI9V+3DVcXNKG1OShSdzT8DT+ReDz+3sPfT0dD7i+z8uO66bzUCUCuskeOZ8tjygUrqlWywe0/L7v+8vOx3HdR0WODWWGo9ffZp4Gvjneq+vQ+Fubh+XTfB8H5c/P37avbu62aPqUNl2IeOtL/oSQRKke6J9xShfBEs0y0Oi8l7V3tLSzbfb749dPY3KzGe9p8dP33dv7+6vrm+WfO0F6vhir8Qu2N4L9AikMLlc+MWyXxjb4+MFUJ2hhn9V8DdfXz3c3e5+//Th8an3ua3qeTFVW213u2u9p6fHx8cPnz59//Fjd/fL7d3d/cO3q6uP19c3N8NvQkzd3Fx//Hj1cH9/d/tl98cPivLh8fHpqbfWbbfNc/hzVKvVVj212/SbQb8daz1fc2MFv9JbW1ujX0G/kP2G2k9wJFGiRIkSJUqUKFGiRIkSJUqUKFGiRIkSJUqUKFGiRIn+T/RfJjzfnXBm6lkAAAAASUVORK5CYII="
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">Lavina Pinto</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <!-- </div> -->
+                            <!-- </div> -->
+                            <!-- <div class="form-group col-md-6"> -->
+                            <!-- <div class="form-row"> -->
+                            <div class="form-group col-md-3 h-100">
+                                <div class="card mx-1">
+                                    <div class="card-body">
+                                        <img src="assignscreen2.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,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"
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bolder">Sebastian Alexander</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="form-group col-md-3">
+                                <div class="card mx-1 h-100">
+                                    <div class="card-body">
+                                        <img src="assignscreen3.png" width="100%" alt="">
+                                        <img src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAOAAAADgCAMAAAAt85rTAAABGlBMVEX////qLw/qLxDqLg7qLQ3qLAzqMBHpKwvqMhPpKgrqMxTqMRLqNRbqNBX6+vrqNRfpKgnrNhjrNxnpKQjrOBr1ycTpHwD+1dDe3t7m5ubtTC7pJgDJFgDtSyzz8/PY2NjsQyT+9vX97+3Ly8vdGAD73dj85OH2jHzuUzbvblnsRSj6ycLoDAC/v7/Ozs7Z2dnUgHbSEADwz8v8wbn4r6T0oJX4loj0g3L0bln0aFDyXkP1hnX1opf6s6rxe2jtVzvXLADkj4bDPCbJl5HCLAq5enKxray/cGbJKACxuLjEYle8qabFW03GUkLBoZ3HSTjJiYHMwsHSt7PVpJ7HNBzUkovj19Xnf3XYNh/nuLPHQzHakYrlwLzVhHtNqgdAAAAQwUlEQVR4nO2dC1MbORaF5Xf7SeM2htAEjGPMMwkYMODwCmF3GAaWmbxJyP//G6tWt+1u6Uq6ajvZ1FafqkmmUiTxxzm690qWO4QkSpQoUaJEiRIlSpQoUaJEiRIlSpQoUaJEiRIlSpQoUSJRtVVP7Xa7S7XGNI8Q+0L6O+hvZH9A7X+IsEpf+9r83Pb+/tnB6eHhYX/96Hxz8/j4ZDC4uNjYWFzcoD9seD8o9TzQ+P8ion/MxWBwcnK8uXn+Zr3fPzw9ONvf396ep9+G9uq0idbmKAwlOT8eXGwE8l/llq8WU4NppjJTrZYspjIT+ynPlBop44v9X5bJ+7mQzaTS6bxVKlVnZur1xkitoby/jvJvDDaP1vunZ/vb8934vKvzZ/3NgY/z/LlP0mjU65VqtUL/K1WZKpVKxf+RaWao8S9VR6KvPFDZGqo8Uj5QOp0efQ98+ByV7clxbDubSZcr9RH31tbG4Oh0u21K1z47p2CUySOqz87O1v3v6PjbWh9pdqwR30wFABzxlSwFoM/oKyWYTqFzAbDDVMhXPNSTwzUDvPk3FK5RCadEUB0inDZgGgAMbB1amytSUtepNlon+1i8c0o3q2CTW2gOaE0MyFSglNXGBgZxdX2xNaOlo5r9rQCpbDffONEGdf5iC4WHd7ACAEIZnRjQQ7Qap2q+08WGauFNC/CnOOjJcSqbqsaxvoXFmz5geRqAhYKbGsh7xlELz/e7AhYde1FGaMSnAaxOBRDqgzrAouNICPsGdL+xg5TQHUB822Z8v2eRYYCUcF3kW12smgFi++AvBnQ8QtedFwOa+UkO/rJGP3awWGxe8Hzdqn44kwFWfj9Ap3nGAa7bpnzTGdUmH7ZBwKK7FeVrW0gswMAY2yXVflDbJnIAYJEHdJrRwfvUNTQwDqBl7GCsPhiswpMI4PPKNBwM8VVFPnRE1QnFVFHPwp3wxmLO2MBQl4BqDHhkoQZMGwPmVA4Wm/0YJQYyEF1EQcC80sGMMqHKiBbdxpivht0jjb8sVEPNu8REEYX4IEBnZ9zs580Tql6C6IRqHDSPaLEIZbSPBAQTCgKOHSz9ilkbBHQXR4AbhmNoOKFTc1BdZLLGgLazM9w1tY0NDCdUvQTxbTAt8k3koG3vDHv99gRdPs4coxlkID7jPu8BNtfNlmDIQE0NjQOoTmgswNE8Oij9NAOn3yUMAJ2d4IDNNjmKiRpoAAgtwckAixpAO+iEXVRCwQqjn9NKSsAytoiCbbAo8nGAB/gaEzZZZ6CmSYAJjdEGtREdVpkDwyIaNjDEN35vsIIGxM4x6BrDAR5ji2jYv7qJgZo5BgRMTamI0jLqzzLnKSMDQ3yhFahrEpNNojEddJoM8AR5XKEKKMwHDqLhLpgX+fIjA8HNkkkRHfaJlmY3H2kidb2BuoRiD2Twu0HhRCYAtHe6HqBJjakbGRhnCU6xiAaNUD1qczNA2L9ZnYG6hIJbiRgnTqFR2+YAvXF7rYk3EMEHA1oQILrNxyiiAeCB2YGTLKCyhMbogro5BjoUlQOyTf0+GnC2bmRgmA8cRMGEpswBxzXG4QGPTAaZWYR/4R44Dmg4oehBNFREsdv5ArcE/VEGuxuMqiIBHB/4Xs5YJTGh4E4CbPMTHakFgO4GBXyDOhON9D+5geOAum+vLisWroaWNQlFO+jwgFkKeIyZ1Dj/pAEdAzbnau+uA0SDGqpZgpouwQOyWW0DsZ+flfPJWkRzjpCFfzFEsIRKxhg0IDio2VE+2iforFbXvu9S5/2TLUAOsEaWX/5xc1ktgwkFASE+uMaMAaEiOgJs00lNc2DB4+H4qh5grUYW/k0RR13C0o0x4KQ9BlR3QaGIsmF0VT3ICHjRfEpaBB1ifEDPRA/RshQ1FJrT4hw4CUWUDaNtBaBIp+QLGzgE9Ez886/bABEetME5LcYbS1BE50hXCljnWoOIJw0onUJHgJ6Jf/51t3RpWToDwSYILkHEZnA4bUveWYLMU/oXCSgd08aAzMQ//7pfqqTLgIH4Lm/a5r1R5oxsu75POjShvPB8kYBGAamJL16+/M/DUjVfFppgKKEpdUJ1NQYCPKWztoIIn08uoBygZ+JLivhtiAiPabomAQIWRb4Q4CE5QwMq+SL5BAB9E1+8+3hZyht1+Ti7+RBgn24m4tCp+Px9Lg8YmOgjwj1Cl1DDQZQBfiGHGEABT8XnD9giYK3GTHzx9/UlOIfqxpjQEiyiAc9J35kCX1XgAwGZiS8o4s1lPi8mFNoKwgmFmgRUYzzAdduYTs1XUgAyE1+8ePXP7hDRIKFQiYncZQYA3WNylDGl4/CiBXR00CQBrNUWqIUU8Y8lDxGcYiQlRtMkID7bHZDzlCGemm90SiEFrC2/8ghX/rmliKk4XR7dBdmW/qRsAifiSfgUgMzEV69erbyn81tqaGGoR4CXK8IJBZcg5KDjbpGB5b1sDBqGr4QC9Ez0CF+/v1+yMmluBYZLDL6GggY6ToNu6KMEFRgMxRc66VUDeiZ6hCsL778FiPAKBAdtsMaIe0EGWCZbaiI1XkXKpwOsLa9QvpWV1wsfriiidiOhHbTBGuM4RdJAAwp4Kr6SDrBWe8YIVxYWPnxcKmehHqHbKYFdPrwEqYh6yanwovNL5CQbBUhNZB6+Xlh4d72UzwIJ1XR5zSDqA8bG45Yfx2chAKmJHh8FXFj4dHOZyqBKDL6GogEhOj6ePB/GQc/E1yuMb+HZwnfaM1JGTVC3BB0cIIjHx5Pjo8IBUhN9QIr4eZciZsAxNGSgQZdHAMJwGvv8k2wsYG15CPiMIY4JM5qtLiqhckAZG8THAZZMHPRM9PGolj/fjhHBHmFQYgJA9orxbEA6QT4TQM/EZ4GWe3R+y2bMtrryGjoENBCAV4rwWeaAnokjwuXe/VI+Y9Yj5Ak1BawI6eT5hu9CmAHWlp+NtFzrfc2FV2C4xJgm1BBQxOPry+htCENAauLIwrWjRjZioK7E2PKEmgAC7vH2hd4pMwYMTFz+/KZF+eAmb55QPKC49pR8MQA9xOXP/VajkE0ZGahKKBYQxOPjGeaLBUjab5+3slnDHqHo8jhAGA6wz5oMkKyeLrYyOWFK042hii6PAJTRCXhR/8wBSe1so5WyxSavW4HwTgkFKIUD0sn5h9xNhPD2L1r5QkacQrPaEiPZy48AQ88pwpDJ7OP4yiaAhOwPWiUbmkJl+wj57aYooE30NAg8Lp7eW7kGgGTupFWxs+A2YtKE2qQhNjcNnijOPnbXAA1Ieputuh3eJklKKGxgUXpYEQBumQECeCAfFpCsnbcadiZ8UCGZQmMZ6BTIhmWCJ4Yzco8piKeFBSTdI4Yn44M3usidIFOZDMqTmCeuvuFNCgQg6a57Ywt3EBMJqHYFKqcYxzv4PUlNQCfijW6KaAFJuz/EixoI90DYQHgMHQO6LXKejY+n4NMBktXD543s8KhQYqC+hOoMdBfJkR0TDsQr4wBJ7WCxlcqlAL7wCpSUUNBACeAF+eLGYQPxIlfRFIBsKsvnoI/wSPniGeg0T0gfBFSiSfDCVwkVgGxssWzw/VxMQA16BAU8J4euFgaHZ0X4ZICEbJ+0qoXQm2XRgMI9PuYKZIAH5oAQXsniBAOSuePWTAQvwidrEdoSKgX8Qs5MAUE8gQ8ctr2prFFIhd8riyzASEDhCqM3MArYJ/tGgDAdH0/vLhpwEcibyihe+M1c+QLUB1S/AingIZlrmuDxYxmM5921E65ydd/4eGlpQDNGAQ0bCI3ZPuAp6WEBJeaJ6fTvSkYBSZtOZdkM92Y8F1BJi4gYWDQy0Nk5I10UoMQ7EM+/Cxq5L9rub7UyGf62CJIvbGARNFC2AingPmnrAKXOSfCCe2ihG790Kmtlsvx1Jn4BRvgQAcUY6OzMkVUloJIOwhtd5R0C0qmMji1Z8baPYgGGW7zZChQAe4S4ljGYHG98jTD4WEHt7KJlZaHbPlH/ohU0toEC4BohqbzF78hl602HF76pzD4Ywg6TctCDVPgOLwsookUoDGSPlFnMYOwyxGOA3lRWyYHX7VQFRlphCnBCFXzsY9jH7lToIvewPcBe77hVt8Mf+lA0CFmLj/BpWwQASAg5MgRE4ZXL9mCL9XWJfxk5X3gBSgKKqzB0O+iyD0hOThf5HERwVbkewVPmMysLaHiXFPIPbSB7ZM4BGtASZzKJfd5V5XQeyZeS8iEWoBqQfcR1vzmRdSBeOUrHLT+OT15gJNtcZIvwAL0PKc/pAVV00doZ2Mfx5fF8iBaPXoFst+Q9KCA2G4xX5ugM/MOMMPiA0iLqPSig3YT6ug5MGk4BT8MnaxARvngBZbM2VTOPo0G5B/Cp6ksK5V9cA4PnNzZSsehgPH71cctP5V/UQEmBMTLQ8R+3cmLHwQPTKeCllXzyBiFfgCZ8wQNzzt3p4Inp5OMZjy92QB13hz3y6K0RoAQOsk8oL5H5jM9nZAFOJaBO8Oy/s+bkdCAeb19G4V+kwEgXoGyXJAEMntQ8hwSEy4oknKZ80gITP6Ds2Jc9+m8H45wUDocntAeFf/IFCN66k/I5waP/iKNqhHIueTjF6qnhQxYYs4D6JzKqPqFlk7gn2pfm4hmdz5B8pgGlRTR4/OZbF4OCpYPs4/lU+ZQWmKIxYCt4gOpcc6p4uuWn9k9eYEwDOqwx3ritqCBmdJPyyQuoYYdgS/Bx9Bhq25gOqiwQnRBPrj2g+WT5VAGO/vEeo0Uo9Q7mU9vH8eEKDNJA9+voQeI99CJU0GHw+PKi8k/aAbEGNt+OAEkhMyEciKfnyyn8C5+iSQuMgm/UBT190WVUDQfSiXjq8hLli5wSxlmAjns55iO9ndhs8flU/sn5kAuQGhhKKCFfc7HIpHQIvKyKD1dg1IDdMOCnJhIHh8ePZtryqeSLswCd5kOYj6x2MtOjQ9j30/mcnacIINl1p0UH4AnVMy4fegE6za9RPtI2tNAIbwL/ClI+jYGPHCD5brAKpXQQHmBftLwo+nvcAuM0v/F8tJDaE8JJ8ET7cnj/YvK5e8A/V9vrpCaiA/FE+/h44vkMADvfRT7aKpSESjYpnm71cfs/nk9aQDUBfYD4aCWFC40OTUaHiieaz2QBfqzBgAIhAs0ITxPP6fC5nSsZH03pXlbPw+OJU4sML/dL+B7kfIQ8LbkZIzqZe0Jt0S4/fH1R7iH2dhV4VM/uOg5/KGZKB9qX0dg3FT63syQ0eEGPHzsOwkU5Hco+nX/yfMr5XGfvVv7vYI9V+3DVcXNKG1OShSdzT8DT+ReDz+3sPfT0dD7i+z8uO66bzUCUCuskeOZ8tjygUrqlWywe0/L7v+8vOx3HdR0WODWWGo9ffZp4Gvjneq+vQ+Fubh+XTfB8H5c/P37avbu62aPqUNl2IeOtL/oSQRKke6J9xShfBEs0y0Oi8l7V3tLSzbfb749dPY3KzGe9p8dP33dv7+6vrm+WfO0F6vhir8Qu2N4L9AikMLlc+MWyXxjb4+MFUJ2hhn9V8DdfXz3c3e5+//Th8an3ua3qeTFVW213u2u9p6fHx8cPnz59//Fjd/fL7d3d/cO3q6uP19c3N8NvQkzd3Fx//Hj1cH9/d/tl98cPivLh8fHpqbfWbbfNc/hzVKvVVj212/SbQb8daz1fc2MFv9JbW1ujX0G/kP2G2k9wJFGiRIkSJUqUKFGiRIkSJUqUKFGiRIkSJUqUKFGiRIn+T/RfJjzfnXBm6lkAAAAASUVORK5CYII="
+                                            width="15px" alt="">
+                                        <span class="text-muted small">youtube.com</span>
+                                        <span style="float: right;"><i
+                                                class="fal fa-trash-alt lightgraytext"></i></span>
+                                        <div class="text-info font-weight-bold">Lavino Pinto</div>
+                                        <span class="text-danger small">43.54%</span>
+                                        <span class="text-secondary small">10:08</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <!-- </div> -->
+                        <!-- </div> -->
+                        <div class="text-primary font-weight-bold form-control-sm pl-0 mt-2">View All</div>
+                    </div>
+                </div>
+                <div class="row mt-5">
+                    <div class="col-md-3 m-1"></div>
+                    <div class="col-lg-2 m-1 text-center">
+                        <div class="row mt-3 bg-white" style="border-radius: 8px;">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-auto mb-auto">
+                                <img src="appleimg.png" class="float-lg-left float-md-right float-sm-right" width="32px"
+                                    alt="">
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-6 col-sm-6 text-md-left text-sm-left">
+                                <div class="text-info small">Download on the</div>
+                                <div class="text-info font-weight-bold">App Store</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 m-1 text-center">
+                        <div class="row mt-3 bg-white" style="border-radius: 5px;">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-auto mb-auto">
+                                <img src="playstoreimg.png" class="float-lg-left float-md-right float-sm-right"
+                                    width="32px" alt="">
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-6 col-sm-6 text-md-left text-sm-left">
+                                <div class="text-info small">Get it on</div>
+                                <div class="text-info font-weight-bold">Google Play</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-2 m-1 text-center">
+                        <div class="row mt-3 bg-white">
+                            <div class="col-xl-3 col-lg-3 col-md-6 col-sm-6 mt-auto mb-auto">
+                                <img src="windowimg.png" class="float-lg-left float-md-right float-sm-right"
+                                    width="32px" alt="">
+                            </div>
+                            <div class="col-xl-9 col-lg-9 col-md-6 col-sm-6 text-md-left text-sm-left">
+                                <div class="text-info small">Get it on</div>
+                                <div class="text-info font-weight-bold">Windows</div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-3 m-1"></div>
+                </div>
+                <div class="text-center mt-5">
+                    <img src="lastimg.png" class="image-fluid" width="220px" alt="">
+                </div>
+                <div class="small text-center mt-4 mb-4 text-dark">
+                    Copyright 2020 WAi Technologies All Rights Reserved | Privacy Policy | Terms Of Service
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        var xValues = ["Ihiee", "France",];
+        var yValues = [40, 60,];
+        var barColors = ["#5FE3A1", "#A4A1FB",];
+
+        new Chart("myChart", {
+            type: "pie",
+            data: {
+                datasets: [{
+                    backgroundColor: barColors,
+                    data: yValues
+                }]
+            },
+        });
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,201 @@
+        body{
+            background-color: #F5F5F5;
+        }
+        .navicon{
+            font-size: x-large;
+        }
+        .lightbluecolor{
+            color: #0095DA;
+        }
+        .lightbluebg{
+            background-color: #0095DA;
+        }
+        .sidenavicon{
+            color: #9EA4AC;
+            font-size: large;
+        }
+        .sidenavfont{
+            color: #414C59;
+            margin-left: 1%;
+            margin: 0%;
+        }
+        .lightweightfont{
+            font-weight: 600;
+        }
+        .myviewfont{
+            color: #707070;
+        }
+        .tableheadingcolor{
+            color: #243A5E;
+        }
+        .lightgraytext{
+            color: #999999;
+        }
+        .tablefont{
+            font-size: 14px;
+        }
+        .cardimgfont{
+            color: #5D5D5D;
+        }
+        .reddot{
+            font-size: 8px;
+            top: 2px;
+            right: 1px;
+        }
+        .bord_bottom {  
+            border-bottom: 2px solid #0095DA;
+        }
+        .dropbg {
+            background-color: #41AAE140;
+        }
+        .bg_img{
+            background-color: #41AAE140;
+        }
+        .st {
+            background-color: #6DB1E8;
+        }
+        .nd {
+            background-color: #F64E60;
+        }
+        .rd {
+            background-color: #A4A1FB;
+        }
+        .th {
+            background-color: #9EA4AC;
+        }
+        .dropsmallwidth {
+            width: 32px;
+        }
+        .droplargewidth{
+           width: 58px;
+           /* height: 58px; */
+        }
+        .card9font {
+            font-size: xx-small;
+        }
+        .dot {
+            height: 5px; width: 5px;
+            border-radius: 50%;
+            display: inline-block;
+            margin-bottom: 2px;
+        }
+        .radiusborder {
+            border-radius: 15px;
+        }
+        .bordleft {
+            border-left: 2px solid #0095DA;
+        }
+       .blue2 {
+            background-color: rgb(212, 231, 243);
+        }
+        .bordr1{
+            border-right: 7px solid #555AAC; 
+        }
+        .bordrrds{
+            border-radius: 7px
+        }
+        .bordr2{
+            border-right: 7px solid #FA5EF1; 
+        }
+        .bordr3{
+            border-right: 7px solid #1D6FB5; 
+        }
+        .bordr4{
+            border-right: 7px solid #FF0000; 
+        }
+        .bordr5{
+            border-right: 7px solid #F77900; 
+        }
+        .bordr6{
+            border-right: 7px solid #334557; 
+        }
+        .bordr7{
+            border-right: 7px solid #FF7D8B; 
+        }
+        .suspicious{
+            font-weight: 600;
+        }
+        .piebox1{
+            color: #5FE3A1;
+        }
+        .piebox2{
+            color: #A4A1FB;
+        }
+        .popover{
+            background-color: gray;
+        }
+        .tickmark{
+            top: -4px;
+            right: -12px;
+            color: #1DC76C;
+        }
+        .stprogress{
+            background-color: #6FCEFB;
+        }
+        .rdprogress{
+            background-color: #1BC5BD;
+        }
+        .table{
+            margin-top: -1%;
+        }
+
+        /* vertical navbar */
+
+        .sidebar {
+            margin: 0%;
+            padding: 0%;
+            width: 16%;
+            background-color: #f1f1f1;
+            position: fixed;
+            height: 100%;
+            overflow: auto;
+        }
+
+        .sidebar a {
+            display: block;
+            color: black;
+            padding: 16px;
+            text-decoration: none;
+        }
+
+        .sidebar a.active {
+            background-color: #04AA6D;
+            color: white;
+        }
+
+        div.content {
+            margin-left: 200px;
+            padding: 1px 16px;
+            height: 1000px;
+        }
+
+        @media screen and (max-width: 1200px) {
+            .sidebar {
+                width: 100%;
+                height: auto;
+                position: relative;
+            }
+
+            .sidebar a {
+                float: left;
+            }
+
+            div.content {
+                margin-left: 0;
+            }
+        }
+        @media only screen and (max-width: 575px) {
+            .verticalnavbar{
+                margin-top: 10%;
+                width: 100%;
+            }
+            .dashboard{
+                margin-top: 0%;
+            }
+          }
+
+        @media screen and (max-width: 400px) {
+            .sidebar a {
+                float: none;
+            }
+        }
